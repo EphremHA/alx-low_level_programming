@@ -3,7 +3,7 @@
 /**
  * print_sign - checks alphabet
  * _putchar - Displays characters
- * @c:  Variable of function
+ * @n: Variable
  *
  * Return: always b
  */
@@ -16,7 +16,7 @@ int print_sign(int n)
 		if (n > 0)
 		{
 			_putchar(43);
-			b =1;
+			b = 1;
 		}
 		if (n < 0)
 		{
