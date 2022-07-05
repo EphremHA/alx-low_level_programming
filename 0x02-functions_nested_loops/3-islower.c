@@ -3,7 +3,7 @@
 /**
  * _islower - prints small case alphabet 10x
  * _putchar - Displays characters
- * @c - Variable of function
+ * @c:  Variable of function
  *
  * Return: always b
  */
