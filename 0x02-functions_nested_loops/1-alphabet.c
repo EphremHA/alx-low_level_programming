@@ -3,10 +3,6 @@
 /**
  * print_alphabet - prints small case alphabet
  * _putchar - Displays characters
- *
- * 
- *
- * 
  */
 void print_alphabet(void)
 {
