@@ -10,7 +10,10 @@
  */
 int print_last_digit(int g)
 {
+	if (g < 0)
+		g *= (-1);
 	g  = g - ((g / 10) * 10);
+	 g += 48;
 	_putchar(g);
 	return (0);
 }
