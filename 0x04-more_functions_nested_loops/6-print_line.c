@@ -3,7 +3,7 @@
 /**
  * print_line - adds numbers
  * _putchar - Displays characters
- * @n - Variable
+ * @n: Variable
  *
  * Return: Void
  */
