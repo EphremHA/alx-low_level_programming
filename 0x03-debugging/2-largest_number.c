@@ -2,28 +2,28 @@
 
 /**
  * largest_number - returns the largest of 3 numbers
- * @aa: first integer
- * @bb: second integer
- * @cc: third integer
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
  * Return: largest number
  */
 
-int largest_number(int aa, int bb, int cc)
+int largest_number(int a, int b, int c)
 {
-	int flargest;
+	int largest;
 
-	if (aa > bb && bb > cc)
+	if (a > b && a > c)
 	{
-		flargest = aa;
+		largest = a;
 	}
-	if (bb > aa && aa > cc)
+	if (b > a && b > c)
 	{
-		flargest = bb;
+		largest = b;
 	}
-	if (cc > aa && cc > bb)
+	if (c > a && c > b)
 	{
-		flargest = cc;
+		largest = c;
 	}
 
-	return (flargest);
+	return (largest);
 }
