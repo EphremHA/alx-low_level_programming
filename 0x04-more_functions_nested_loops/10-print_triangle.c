@@ -16,7 +16,7 @@ int print_triangle(int size)
 		_putchar(35);
 		_putchar(10);
 	}
-	else if (size == 0)
+	else if (size <= 0)
 		_putchar(10);
 	else if (size > 1)
 	{
