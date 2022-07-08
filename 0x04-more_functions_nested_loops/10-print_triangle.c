@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - # triangle
- * @size:- triangle size
+ * @size:- triangle size X size
  *
  * Return: 0
  */
