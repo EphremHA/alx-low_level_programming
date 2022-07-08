@@ -6,7 +6,7 @@
  * Return: int
  */
 
-int main()
+int main(void)
 {
 	int i;
 
