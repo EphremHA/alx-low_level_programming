@@ -24,13 +24,13 @@ int main(void)
 		{
 			printf(" Buzz");
 		}
-		else if (i < 3)
+		else if (i == 1)
 		{
 			printf("%d ", i);
 		}
-		else
+		else if (i == 2)
 		{
-			printf("%d ", i);
+			printf("%d", i);
 		}
 	}
 	printf("\n");
