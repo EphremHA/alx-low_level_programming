@@ -3,10 +3,10 @@
 /**
  * main - 0.5%!
  *
- * Return: Void
+ * Return: int
  */
 
-int main(void)
+int main()
 {
 	int i;
 
