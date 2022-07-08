@@ -32,6 +32,8 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
+		if (i == 100)
+			printf("\b");
 	}
 	printf("\n");
 	return (0);
