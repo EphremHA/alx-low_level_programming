@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * print_rev - print in reverse
- * _putchar - print char
- * _strlen - string length
- * @s: Parameter
+ * print_rev - reverse_
+ * _putchar - char print
+ * @s: parameter
  *
  * Return: none
  */
 
 void print_rev(char *s)
 {
-	int i;
-	int l;
-	l = _strlen(s);
+	int i, j;
+	int length;
 
-	for (i = l; i >= 0; --i)
+	for (j = 0; *(s + j) != 0; ++j)
+		length = j;
+	for (i = length; i >= 0; --i)
 	{
 		_putchar(*(s + i));
 	}
