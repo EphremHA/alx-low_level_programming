@@ -14,16 +14,13 @@ void print_rev(char *s)
 	int length = 0;
 
 	for (j = 1; *(s + j) != 0; ++j)
-	{
 		length = j;
-		if (length == 0)
-			goto f;
-	}
 	for (i = length; i >= 0; --i)
 	{
+		if (length == 0)
+			break;
 		_putchar(*(s + i));
 	}
-f:
 	_putchar(10);
 }
 
