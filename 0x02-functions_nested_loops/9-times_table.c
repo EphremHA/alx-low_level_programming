@@ -17,19 +17,21 @@ void times_table(void)
 			p = r * c;
 			fd = p % 10;
 			sd = p / 10;
-			if (sd == 0)
-			{
+			if (c == 0)
 				_putchar(48 + fd);
-				_putchar(44);
-				_putchar(32);
-				_putchar(32);
-			}
-			else
+			else if (c > 0 && sd == 0)
 			{
-				_putchar(48 + sd);
-				_putchar(fd + 48);
 				_putchar(44);
 				_putchar(32);
+				_putchar(32);
+				_putchar(48 + fd);
+			}
+			else if (c > 0 && sd > 0)
+			{
+				_putchar(44);
+				_putchar(32);
+				_putchar(48 + sd);
+				_putchar(48 + fd);
 			}
 		}
 		_putchar(10);
