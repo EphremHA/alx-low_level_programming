@@ -17,15 +17,26 @@ char *_strncpy(char *dest, char *src, int n)
 		;
 	for (slen = 0; *(src + slen) != '\0'; ++slen)
 		;
-	if (n < slen)
-		for (i = 0; i <= n - 1; i++)
-			*(dest + i) = *(src + i);
-	if (n > slen)
+	if (dlen > slen)
 	{
-		for (i = 0; *(src + i) != 0; ++i)
-			*(dest + i) = *(src + i);
-		/*for (i = slen; i <= dlen; i++)*/
-			*(dest + i) = '\0';
+		if (n <= slen)
+			for (i = 0; i <= n; ++i)
+				*(dest + i) = *(src + i);
+		if (n > slen)
+			for (i = 0; i <= slen; ++i)
+				*(dest + i) = *(src + i);
 	}
+	if (slen > dlen)
+	{
+		if (n > slen)
+			for (i = 0; i <= slen; ++i)
+				*(dest + i) = *(src + i);
+		if (n <= slen)
+			for (i = 0; i <= n; ++i)
+				*(dest + i) = *(src + i);
+	}
+	if (slen == dlen)
+		for (i = 0; i <= slen; ++i)
+			*(dest + i) = *(src + i);
 	return (dest);
 }
