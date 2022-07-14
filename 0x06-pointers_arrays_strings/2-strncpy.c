@@ -21,8 +21,10 @@ char *_strncpy(char *dest, char *src, int n)
 		for (i = 0 ; i <= n - 1; ++i)
 			*(dest + i) = *(src + i);
 	else if (n > slen)
-		for (i = 0 ; *(src + i) != 0; ++i)
+		for (i = 0 ; *(src + i) != '\0'; ++i)
 			*(dest + i) = *(src + i);
-	*(dest + dlen + i) = '\0';
+	for (dlen = 0; *(dest + dlen) != '\0'; ++dlen)
+		;
+	*(dest + dlen) = '\0';
 	return (dest);
 }
