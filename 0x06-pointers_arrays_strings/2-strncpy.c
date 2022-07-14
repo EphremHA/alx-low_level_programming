@@ -23,14 +23,22 @@ char *_strncpy(char *dest, char *src, int n)
 			for (i = 0; i <= n - 1; ++i)
 				*(dest + i) = *(src + i);
 		if (n > slen)
+		{
 			for (i = 0; i <= slen; ++i)
 				*(dest + i) = *(src + i);
+			for (i = slen; i <= n - 1; ++i)
+				*(dest + i) = '\0';
+		}
 	}
 	if (slen > dlen)
 	{
 		if (n > slen)
+		{
 			for (i = 0; i <= slen; ++i)
 				*(dest + i) = *(src + i);
+			for (i = slen; i <= n - 1; ++i)
+				*(dest + i) = '\0';
+		}
 		if (n <= slen)
 			for (i = 0; i <= n - 1; ++i)
 				*(dest + i) = *(src + i);
