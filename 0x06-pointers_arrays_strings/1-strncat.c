@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (*(src + slen))
 		++slen;
 	if (n <= slen)
-		for (i = 0 ;i <= n - 1; ++i)
+		for (i = 0 ; i <= n - 1; ++i)
 			*(dest + dlen + i) = *(src + i);
 	else if (n > slen)
 		for (i = 0 ; *(src + i) != 0; ++i)
