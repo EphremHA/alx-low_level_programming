@@ -29,7 +29,7 @@ char *cap_string(char *str)
 		}
 		if ((*(str + i) >= 65 && *(str + i) <= 90) && state == 0)
 			state = 1;
-		if (*(str + i) >= 48 && *(str + i) <=57)
+		if (*(str + i) >= 48 && *(str + i) <= 57)
 			state = 1;
 	}
 	return (str);
