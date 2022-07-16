@@ -24,8 +24,15 @@ void print_times_table(int n)
 				sd = set_digits(p, 0, 1, 0);
 				td = set_digits(p, 0, 0, 1);
 				if (c == 0)
-					_putchar(48 + fd);
-				print_digits(fd, sd, td);
+					print_digits(0, 0, 0);
+				else if (r == 0)
+					print_digits(1000, 0, 0);
+				else if (c > 0 && sd == 0 && td == 0)
+					print_digits(fd, sd, td);
+				else if (c > 0 && sd > 0 && td == 0)
+					print_digits(fd, sd, td);
+				else if (c > 0 && sd >= 0 && td > 0)
+					print_digits(fd, sd, td);
 			}
 			_putchar(10);
 		}
