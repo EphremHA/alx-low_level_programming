@@ -1,4 +1,6 @@
 #include "main.h"
+#include "set_digits.c"
+#include "print_digits.c"
 
 /**
  * print_times_table - number table
@@ -9,9 +11,6 @@
  *
  * Return: void
  */
-
-int set_digits(int p, int d1, int d2, int d3);
-void print_digits(int fd, int sd, int td);
 
 void print_times_table(int n)
 {
