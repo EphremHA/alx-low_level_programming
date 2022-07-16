@@ -8,7 +8,6 @@
  * @c - Variable of called function
  *
  * Return: Always 0.
- *
  */
 int main(void)
 {

@@ -4,6 +4,7 @@
  * print_times_table - number table
  * set_digits- returns digits
  * _putchar - Displays characters
+ * print_digits - formating function
  * @n: n times table
  *
  * Return: void
@@ -24,30 +25,7 @@ void print_times_table(int n)
 				td = set_digits(p, 0, 0, 1);
 				if (c == 0)
 					_putchar(48 + fd);
-				else if (c > 0 && sd == 0 && td == 0)
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-					_putchar(32);
-					_putchar(48 + fd);
-				}
-				else if (c > 0 && sd > 0 && td == 0)
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-					_putchar(48 + sd);
-					_putchar(48 + fd);
-				}
-				else if (c > 0 && sd >= 0 && td > 0)
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(48 + td);
-					_putchar(48 + sd);
-					_putchar(48 + fd);
-				}
+				print_digits(fd, sd, td);
 			}
 			_putchar(10);
 		}
