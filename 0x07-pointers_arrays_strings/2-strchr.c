@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * *_strchr - searches value of c in s
@@ -14,7 +13,9 @@ char *_strchr(char *s, char c)
 	int i;
 
 	for (i = 0; i < (int) sizeof(s); i++)
+	{
 		if (*(s + i) == c)
 			return (&s[i]);
-	return (NULL);
+	}
+	return ('\0');
 }
