@@ -22,7 +22,6 @@ char *_strchr(char *s, char c)
 		}
 		else
 			ret = '\0';
-
 	}
 	return (ret);
 }
