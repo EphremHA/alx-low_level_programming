@@ -20,8 +20,8 @@ char *_strchr(char *s, char c)
 			ret = &s[i];
 			break;
 		}
-		else
-			ret = '\0';
+		else if (c == '\0')
+			return ('\0');
 	}
 	return (ret);
 }
