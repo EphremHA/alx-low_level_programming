@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+/*#include <stddef.h>*/
 
 /**
  * *_strchr - searches value of c in s
@@ -12,7 +12,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *ret;
+	char *ret, a;
 
 	for (i = 0; i < (int) sizeof(s); i++)
 	{
@@ -23,7 +23,10 @@ char *_strchr(char *s, char c)
 			break;
 		}
 		else
-			ret = NULL;
+		{
+			a = '0';
+			ret = &a;
+		}
 	}
 	return (ret);
 }
