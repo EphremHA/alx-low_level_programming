@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 			/*ret = &s[i];*/
 			break;
 		}
-		else 
+		else
 			ret = NULL;
 	}
 	return (ret);
