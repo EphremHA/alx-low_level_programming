@@ -15,12 +15,10 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; *(s + i) != c; i++)
 	{
-		continue;
-
+		if (*(s + i) == c)
+		{
+			break;
+		}
 	}
-	if (*s == c)
-		return (s);
-	/*while (*(s + i) != '\0')*/
-
-	return (&s[i]);
+	return ((s + i));
 }
