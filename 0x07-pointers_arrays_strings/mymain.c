@@ -18,24 +18,18 @@ int main(void)
 
 {
 
-	    char *s = "hello";
+	    char *s = "hello, world";
 
-	        char *f;
+	        char *f = "world";
 
-
-
-		    f = _strchr(s, 'l');
+		    char *t;
 
 
 
-		        if (f != NULL)
+		        t = _strstr(s, f);
 
-				    {
+			    printf("%s\n", t);
 
-					            printf("%s\n", f);
-
-						        }
-
-			    return (0);
+			        return (0);
 
 }
