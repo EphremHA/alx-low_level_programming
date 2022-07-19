@@ -11,7 +11,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, usum, dsum;
+	int i, j, usum, dsum, t;
 
 	for (i = 0; i < size; i++)
 	{
@@ -19,11 +19,12 @@ void print_diagsums(int *a, int size)
 		{
 			if(i == j)
 			{
-				usum += a[i][j];
+				t = a[i][j];
+				usum += t;
 			}
 			if (j == size - i)
 			{
-				dsum += a[i][j];
+				/*dsum += a[i][j];*/
 			}
 		}
 	}
