@@ -11,17 +11,19 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j, check = 0;
-	char ts, tu;
+	char ts = *(s + 0), tu = *(accept + 0);
 
-	for (i = 0; *(s + i) >= '\0'; i++)
+	if (ts == '\0' || tu == '\0')
+		return (check);
+	for (i = 0; *(s + i) > '\0'; i++)
 	{
 		ts = *(s + i);
-		for (j = 0; *(accept + j) >= '\0'; j++)
+		for (j = 0; *(accept + j) > '\0'; j++)
 		{
 			tu = *(accept + j);
 			if ((ts != ' ' && ts != '.' && ts != ',') && (ts == tu))
 				++check;
-			if (ts == ' ' || ts == '.' || ts == ',' || ts == '\0' || tu == '\0')
+			if (ts == ' ' || ts == '.' || ts == ',')
 				return (check);
 		}
 	}
