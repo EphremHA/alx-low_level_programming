@@ -1,10 +1,30 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - finds square root
- * @n: n^0.5
+ * _pow_recursion - finds square root *
+ * @x: parameter
+ * @y:parameter
  *
  * Return: square root
+ */
+
+int _pow_recursion(int x, int y)
+{
+	if (x == 0)
+		return (0);
+	if (y == 0)
+		return (1);
+	if (y < 0 && (y % 2 == 0))
+		return (-1);
+	if (x < 0 && (y % 3 == 0))
+		return (x * _pow_recursion(x, y - 1));
+	return (x * _pow_recursion(x, y - 1));
+}
+/**
+ * _sqrt_recursion - power
+ * @n: parameter
+ *
+ * Return: int
  */
 
 int _sqrt_recursion(int n)
@@ -20,8 +40,6 @@ a:
 		else if (_pow_recursion(i, 2) == n)
 			return (i);
 		else if (i >= n)
-			goto b;
-		else
 			goto b;
 	}
 b:
