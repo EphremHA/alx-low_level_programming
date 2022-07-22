@@ -1,1 +1,16 @@
 !<arch>
+0-isupper.c/    0           0     0     644     56        `
+#include "main.h"
+
+int _isupper(int c)
+{
+	reutrn (0);
+}
+0-strcat.c/     0           0     0     644     69        `
+#include "main.h"
+
+char *_strcat(char *dest, char *src)
+{
+	return;
+}
+
