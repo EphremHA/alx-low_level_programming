@@ -14,6 +14,6 @@ int main(int argc, char *argv[])
 
 	fix = (long) argv[0];
 	fix = 0;
-	printf("%d\n", argc);
+	printf("%d\n", argc - 1);
 	return (fix);
 }
