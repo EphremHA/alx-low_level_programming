@@ -17,9 +17,11 @@ char *_strdup(char *str)
 
 	if (str[0] == '0')
 		return (NULL);
-	p = create_array((int)sizeof(str), 'E');
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	p = malloc(i + 1);
 	for (i = 0; *(str + i) != '\0'; i++)
-		p[i] = str[i];
+		*(p + i) = str[i];
 	/**(p + i + 1) = '\0';*/
 	return (p);
 }
