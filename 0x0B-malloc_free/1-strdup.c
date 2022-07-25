@@ -23,8 +23,6 @@ char *_strdup(char *str)
 		/*p = f;*/
 		return (NULL);
 	}
-	if (str == NULL)
-		return (NULL);
 	else
 		for (i = 0; *(str + i) != '\0'; i++)
 			*(p + i) = *(str + i);
