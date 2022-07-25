@@ -23,8 +23,9 @@ char *_strdup(char *str)
 		/*p = f;*/
 		return (0);
 	}
-	for (i = 0; *(str + i) != '\0'; i++)
-		*(p + i) = *(str + i);
+	else
+		for (i = 0; *(str + i) != '\0'; i++)
+			*(p + i) = *(str + i);
 	/**(p + i + 1) = '\0';*/
 	return (p);
 }
