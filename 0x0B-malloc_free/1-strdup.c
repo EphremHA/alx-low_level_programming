@@ -14,11 +14,10 @@ char *_strdup(char *str)
 	/*char f[] = "failed to allocate memory\n";*/
 	int i;
 
-	p = str;
 	for (i = 0; str[i] != '\0'; i++)
 		;
-	p = malloc(i + 1);
-	if (p == NULL)
+	p = malloc(i);
+	if (p == NULL || str == NULL)
 	{
 		/*p = f;*/
 		return (NULL);
@@ -27,6 +26,6 @@ char *_strdup(char *str)
 		for (i = 0; *(str + i) != '\0'; i++)
 			*(p + i) = *(str + i);
 	/**(p + i + 1) = '\0';*/
-	*(p + i + 1) = '\0';
+	*(p + i) = '\0';
 	return (p);
 }
