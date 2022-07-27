@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * strLen - determines number of characters in a string without the terminating character
+ * strLen - determines number of characters in a string without '\0'
  * @s: string parameter
  *
  * Return: number of characters
