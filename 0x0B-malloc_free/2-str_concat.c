@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 
 	str1 = strLen(s1);
 	str2 = strLen(s2);
-	constr = str1 + str2;  /* +1 == '\0' */
+	constr = str1 + str2 + 1;  /* +1 == '\0' */
 
 	ptr = (char *) malloc(constr);
 	if (ptr == NULL)
