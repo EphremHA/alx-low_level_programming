@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees mem. occupied by 2d array created dynamically
- * grid: parameter
- * height: parameter
+ * free_grid- frees mem. occupied by 2d array created dynamically
+ * @grid: parameter
+ * @height: parameter
  *
  * Return: none
  */
