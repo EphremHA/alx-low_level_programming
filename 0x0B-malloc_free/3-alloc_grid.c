@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * alloc_grind - matrix of size width X height initialized to zero
+ * alloc_grid - matrix of size width X height initialized to zero
  * @width: matrix width
  * @height: matrix height
  *
@@ -15,7 +15,10 @@ int **alloc_grid(int width, int height)
 	int i, j, **ptr = (int **) malloc(sizeof(int *) * height);
 
 	if (ptr == NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	for (i = 0; i < height; i++)
