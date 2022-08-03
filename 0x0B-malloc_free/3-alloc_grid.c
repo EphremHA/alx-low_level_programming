@@ -6,29 +6,17 @@
  * @width: matrix width
  * @height: matrix height
  *
- * Return: pointer of the matrix
+ * Return: pointer to the created 2-D matrix.
  */
 
 int **alloc_grid(int width, int height)
 {
-	int w,h,i,j, *ptr, c = 0, **p;
+	int i, j, **ptr = (int **) malloc(sizeof(int *) * height);
 
-	w = (sizeof(width) / sizeof(int));
-	h = (sizeof(height) / sizeof(int));
-
-	int arr[(int) (sizeof(width) / sizeof(int))][(int) (sizeof(height) / sizeof(int))];
-	p = (int *) malloc(w * h * sizeof(int));
-	p = &ptr;
-
-	for (i = 0; i < w; i++)
-		for (j = 0; j < height; j++)
-			arr[i][j] = 0;
-
-	for (i = 0; i < w; i++)
-	{
-		for (j = 0; j < h; j++)
-			*(ptr + (c + j)) = arr[i][j];
-		c += j;
-	}
-	return (p);
+	for (i = 0; i < height; i++)
+		ptr[i] = (int *) malloc(width * sizeof(int));
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+			ptr[i][j] = 0;
+	return (ptr);
 }
