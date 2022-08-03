@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
  * alloc_grind - matrix of size width X height initialized to zero
@@ -13,6 +14,10 @@ int **alloc_grid(int width, int height)
 {
 	int i, j, **ptr = (int **) malloc(sizeof(int *) * height);
 
+	if (ptr == NULL)
+		return (NULL);
+	if (width <= 0 || height <= 0)
+		return (NULL);
 	for (i = 0; i < height; i++)
 		ptr[i] = (int *) malloc(width * sizeof(int));
 	for (i = 0; i < height; i++)
