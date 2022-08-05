@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * print_all - prints arguments with provided format string
@@ -11,8 +12,8 @@
 
 void print_all(const char * const format, ...)
 {
-	int cn = 0, print = 1;
-	char *fstr;
+	int cn = 0, nil;
+	char *sstr;
 	va_list ap;
 
 	va_start(ap, format);
@@ -21,39 +22,32 @@ void print_all(const char * const format, ...)
 		switch (*(format + cn))
 		{
 			case 'c':
-				fstr = "%c";
-				print = 1;
-				printf(fstr, va_arg(ap, int));
+				printf("%c", va_arg(ap, int));
 				break;
 			case 's':
-				fstr = "%s";
-				if (va_arg(ap, char*) == NULL)
+				sstr = va_arg(ap, char*);
+				if (sstr == NULL)
 				{
 					printf("(nil)");
-					print = 1;
+					sstr = "";
+					nil = 1;
 				}
-				else
-				{
-					print = 1;
-					printf(fstr, va_arg(ap, char*));
-				}
+				printf("%s", sstr);
+				nil = 0;
 				break;
 			case 'i':
-				fstr = "%d";
-				print = 1;
-				printf(fstr, va_arg(ap, int));
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
-				fstr = "%f";
-				print = 1;
-				printf(fstr, va_arg(ap, double));
+				printf("%f", va_arg(ap, double));
 				break;
 			default:
-				print = 0;
+				nil = 1;
 		}
-		if (*(format + cn + 1) != '\0' && print == 1)
+		if (*(format + cn + 1) != '\0' && nil != 1)
 			printf(", ");
 		cn++;
+		nil = 0;
 	}
 	va_end(ap);
 	printf("\n");
