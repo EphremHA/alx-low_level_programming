@@ -9,13 +9,13 @@
 
 int main(void)
 {
-	unsigned long int i, sum, fn = 1, sn = 2;
+	long double i, sum, fn = 1, sn = 2;
 
-	printf("%lu, %lu", fn, sn);
+	printf("%Lf, %Lf", fn, sn);
 	for (i = 1; i <= 97; ++i)
 	{
 		sum = fn + sn;
-		printf(", %lu", sum);
+		printf(", %Lf", sum);
 		fn = sn;
 		sn = sum;
 	}
